@@ -1,0 +1,30 @@
+.information__1 p {
+    margin: 0;
+    font-size:14px;
+}
+.information__1 p:nth-child(1) {
+    color:#6d6d6d;
+    font-weight:bold;
+    font-size:17px;
+
+}
+.information__1{
+    margin-bottom:15px
+}
+.profile__avatar img {
+    border: 1px solid #686868;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+.profile__avatar{
+    margin:15px 0px;
+}
+.profile__form-avatar label {
+    padding: 5px 35px;
+    background: #696969;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+}

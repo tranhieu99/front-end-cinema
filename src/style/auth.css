@@ -1,0 +1,46 @@
+.after-menu-signin a{
+    color:#fff;
+}   
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+a.isSignInActive {
+    background: red;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 8px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    margin:0px 5px;
+}
+a.isNotSignInActive {
+    background: #aba8a8;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 8px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+.after-menu-signin {
+    margin-top: 50px;
+    border-bottom:1px solid #eee;
+    padding:5px;
+}
+
+.sign-in-form .btn {
+    padding: 15px 25px;
+    background: #920606;
+}
+.sign-up-form p {
+    margin: 0;
+}
+.sign-up-form {
+    margin-top:30px;
+}
+.sign-up-form label{
+    font-size:14px;
+    color:#807b7b;
+    font-weight:bold;
+}
