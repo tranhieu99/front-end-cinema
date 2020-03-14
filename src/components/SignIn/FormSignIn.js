@@ -18,6 +18,7 @@ export default function FormInput(props){
         pass_word:password
       }
       signin(user).then(data =>{
+        console.log(data)
         if(data.error){
           setErr(data.error)
         }

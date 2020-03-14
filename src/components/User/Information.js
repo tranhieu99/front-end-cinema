@@ -34,7 +34,8 @@ const [state,setState] = useState({file: ""});
                                    formData.append("user_name", user.data.user_name);
                                    formData.append("avatar", fileName);
                                    uploadImageFile(formData).then(res =>{
-                                    const filePath = res.data.fileNameInSerVer
+                                    const filePath = res.data.fileNameInServer
+             
                                     setState({file: filePath})                                        
                                    })
                                 } }

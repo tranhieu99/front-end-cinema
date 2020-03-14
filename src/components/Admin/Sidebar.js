@@ -12,7 +12,7 @@ const user = useContext(UserPackage);
     return (
         <div className = "vertical-nav bg-white" id="sidebar">
         <div className = "py-4 px-3 mb-4 bg-light">
-          <div className = "media d-flex align-items-center"><img src={user.data.avatar} alt="..." width="65" className = "mr-3 rounded-circle img-thumbnail shadow-sm" />
+          <div className = "media d-flex align-items-center"><img src={user.data.avatar} alt="..." width="65" style={{'height': '65px'}} className = "mr-3 rounded-circle img-thumbnail shadow-sm" />
             <div className = "media-body">
                 
     {!user.data.loading && <h4 className = "m-0">{`${user.data.first_name} ${user.data.last_name}`}</h4> }

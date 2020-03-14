@@ -11,7 +11,7 @@ const Admin = () => {
     const user = useContext(UserPackage);
     const role = localStorage.getItem("role");
 
-    if(!role){
+    if(role=="GUEST" || !role){
         return <Redirect to ="/" />
     }
     return (

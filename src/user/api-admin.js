@@ -16,6 +16,7 @@ const getStaff = () => {
   return fetch("http://localhost:5555/admin/staff-information", {
     method: 'GET',
   }).then((response) => {
+    console.log(response)
 return response.json()
   }).catch((err) => {
     console.log(err);

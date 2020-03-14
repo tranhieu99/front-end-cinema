@@ -11,54 +11,17 @@ useEffect(()=>{
     setUpdate({...dataUpdate, user_name: props.match.params.username})
 },[])
 
-const onHandleSubmit = (e) =>{
-  updateUser(dataUpdate).then(response =>{
-    if(response){
-      Object.keys(dataUpdate).map(item =>{
-        user.updateDataUser(item, dataUpdate[item])
-      })
-      setRedirect(true);
-    }
-  })
-}
-//     const onHandleSubmit = (e) =>{
-//         e.preventDefault();
-//         const userSignup =  {
-//         first_name: firstName,
-//         last_name: lastName,
-//         zip_code: zipcode,
-//         address: address,
-//         country: country,
-//         city: city,
-//         email: email,
-//         birthday: birthday,
-//         gender: gender,
-//         user_name: username,
-//         pass_word: password,
-//          phone_number: phoneNumber
-//      }
-//      if(userSignup.zip_code.length !== 5){
-//          alert("Zip code sai định dạng")
-//          return;
-//      }
-//      else if(userSignup.user_name.length < 6 ){
-//          alert("username phải lớn hơn 6 ký tự")
-//          return;
-//      }
- 
-//      else if (!userSignup.pass_word.match(/[a-z]/g) || !userSignup.pass_word.match( 
-//          /[A-Z]/g) || !userSignup.pass_word.match( 
-//          /[0-9]/g) || !userSignup.pass_word.match( 
-//          /[^a-zA-Z\d]/g) || userSignup.pass_word.length < 8) {
-//              alert("Password gồm 1 chữ hoa, 1 số, 1 ký tự đặc biệt và lớn hơn 8 ký tự");
-//              return;
-//          }
-//      else if(!userSignup.email.match(/^[a-z][a-z0-9_\.]{5,32}@[a-z0-9]{2,}(\.[a-z0-9]{2,4}){1,2}$/gm) ){
-//          alert("Email không đúng định dạng")
-//          return;
-//      }
+const onHandleSubmit =  (e) =>{
+  e.preventDefault();
+ updateUser(dataUpdate).then(res =>{
+   if(res.data){
+     setRedirect(true)
+   }
    
-//  }
+ })
+
+}
+
 if(redirect){
   return (<Redirect to = {`/Profile/${props.match.params.username}`} />)
 }
