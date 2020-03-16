@@ -12,21 +12,29 @@ const ModalFormFilm = (props) => {
     buttonLabel,
     className
   } = props;
-
+const [state,setState] = useState({})
   const [modal, setModal] = useState(false);
-
   const toggle = () => setModal(!modal);
-
+  const onHandleClick = (e)=> {
+    e.preventDefault()
+    const formData = new FormData();
+    for(let [key,value] of Object.entries(state)){
+      formData.append(key,value)
+    }
+    console.log(formData)
+    props.addFilmApi(formData);
+    setModal(!modal) 
+  }
   return (
     <div>
       <Button color="primary" onClick={toggle} className = "mb-2">{buttonLabel}</Button>
       <Modal isOpen={modal} toggle={toggle} className={className}>
         <ModalHeader toggle={toggle}>Thêm phim mới</ModalHeader>
         <ModalBody>
-            <AddFormFilm />
+            <AddFormFilm addFilmApi = {props.addFilmApi}  state = {state} setState = {setState}/>
         </ModalBody>
         <ModalFooter>
-          <Button color="success">Do Something</Button>{' '}
+          <Button color="success" onClick= {onHandleClick}>Do Something</Button>{' '}
           <Button color="secondary" onClick={toggle}>Cancel</Button>
         </ModalFooter>
       </Modal>

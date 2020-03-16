@@ -1,7 +1,7 @@
 import React,{useEffect,useState} from 'react';
 import {connect} from 'react-redux'
 import '../style/movie.css'
-import {getListFilm} from '../api/film-api'
+import {getListFilm,addFilmApi, deleteFilmApi} from '../api/film-api'
 import ListFilm from '../components/Admin/FilmAdmin/ListFilm'
 import ModalFormFilm from '../components/Admin/FilmAdmin/ModalFormFilm'
 const FilmContainer = (props) => {
@@ -12,12 +12,11 @@ const FilmContainer = (props) => {
 useEffect(()=>{
     props.getListFilm();
 },[])
-console.log(props.film)
     return (
         <div>
-        <ModalFormFilm buttonLabel = "Thêm phim mới" />
+        <ModalFormFilm buttonLabel = "Thêm phim mới" addFilmApi = {props.addFilmApi}/>
 
-        <ListFilm film = {props.film} />
+        <ListFilm film = {props.film} deleteFilmApi = {props.deleteFilmApi} />
 
         </div>
     );
@@ -30,4 +29,4 @@ const mapStateToProps = (state) =>{
 }
 
 
-export default connect(mapStateToProps,{getListFilm})(FilmContainer);
+export default connect(mapStateToProps,{getListFilm,addFilmApi, deleteFilmApi })(FilmContainer);

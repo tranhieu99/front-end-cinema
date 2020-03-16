@@ -70,7 +70,7 @@ const AddStaff = () => {
     }
 }
 if(redirect){
-  return <Redirect to = "/" />
+  return <Redirect to = "/admin/staff-info" />
 }
     return (
         <>

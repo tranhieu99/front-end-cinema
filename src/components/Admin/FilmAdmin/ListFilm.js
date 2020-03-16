@@ -34,7 +34,7 @@ const ListFilm = (props) => {
                <td>{item.movie_name}</td>
                <td>{item.movie_director}</td>
                <td>{item.type_name}</td>
-               <td>            <Button outline color="info" id= {`${item.movie_id}`} type="button">
+               <td><Button outline color="info" id= {`${item.movie_id}`} type="button">
 
         Xem
       </Button>   {' '}
@@ -44,7 +44,7 @@ const ListFilm = (props) => {
       </UncontrolledPopover></td>
                <td> <img src= {item.movie_image} alt = {item.movie_name} width = "120" /> </td>
                 <td style = {{display:"flex"}}>      <Button outline className="mr-2" color="info">Sửa</Button>
-      <Button outline color="danger">Xoá</Button> </td>
+      <Button outline color="danger" onClick = {() => props.deleteFilmApi(item.movie_id)}>Xoá</Button> </td>
              </tr>
              )
           })}
