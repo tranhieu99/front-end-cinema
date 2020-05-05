@@ -7,7 +7,7 @@ import React, {useEffect,useState} from 'react';
 import {get} from 'axios'
 import {FormGroup,FormText, Label, Input } from 'reactstrap';
 
-const AddFormFilm = (props) => {
+const EditFormFilm = (props) => {
 useEffect(() =>{
   get('http://localhost:5555/admin/film-type').then(response =>{
      setType(response.data)
@@ -35,8 +35,8 @@ useEffect(() =>{
       </FormGroup>
       <FormGroup className="mb-3 mr-sm-2 mb-sm-0">
         <Label for="film-type">Thể Loại</Label>
-        <Input type="select"  name="movie_type"  defaultValue={'DEFAULT'} id="film-type" onChange = {handleChange} >
-        <option value="DEFAULT" key ="default" disabled>Chọn thể loại phim ... </option>
+        <Input type="select"  name="movie_type"  defaultValue={props.state.type_id} id="film-type" onChange = {handleChange} >
+        <option value= {props.state.type_id} key ="default" disabled>{props.state.type_name} </option>
 
       {type.map(item => {
         return (
@@ -64,4 +64,4 @@ useEffect(() =>{
   );
 }
 
-export default AddFormFilm;
+export default EditFormFilm;

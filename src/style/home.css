@@ -1,0 +1,11 @@
+.slider-home img {
+    
+    max-width: calc(100% + 10px);
+    min-width: 1075px;
+    height: auto;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%,0);
+    -moz-transform: translate(-50%,0);
+    -webkit-transform: translate(-50%,0);
+}

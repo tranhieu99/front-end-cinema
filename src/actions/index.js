@@ -20,3 +20,9 @@ export const deleteFilm = (movie_id) => {
         payload:movie_id
     }
 }
+export const editFilm = (film) => {
+    return{
+        type: types.ITEM_EDITING,
+        payload: film
+    }
+}

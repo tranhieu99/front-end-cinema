@@ -15,6 +15,7 @@ import Admin from './page/User/Admin'
 import AddStaff from './page/User/AddStaff'
 import StaffInfo from './page/User/StaffInfo'
 import FilmAdmin from './page/FilmAdmin/FilmAdmin'
+import Home from './page/Home'
 export default function App() {
 
   return (
@@ -65,9 +66,6 @@ export default function App() {
   );
 }
 
-function Home() {
-    return <h2>Home</h2>;
-}
 
 function About() {
   return <h2>About</h2>;

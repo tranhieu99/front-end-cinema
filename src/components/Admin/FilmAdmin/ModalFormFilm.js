@@ -12,7 +12,8 @@ const ModalFormFilm = (props) => {
     buttonLabel,
     className
   } = props;
-const [state,setState] = useState({})
+const [state,setState] = useState({
+})
   const [modal, setModal] = useState(false);
   const toggle = () => setModal(!modal);
   const onHandleClick = (e)=> {
@@ -27,7 +28,7 @@ const [state,setState] = useState({})
   }
   return (
     <div>
-      <Button color="primary" onClick={toggle} className = "mb-2">{buttonLabel}</Button>
+      <Button color="primary" onClick={toggle} className = "mb-2 mr-3">{buttonLabel}</Button>
       <Modal isOpen={modal} toggle={toggle} className={className}>
         <ModalHeader toggle={toggle}>Thêm phim mới</ModalHeader>
         <ModalBody>

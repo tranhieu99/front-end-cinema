@@ -1,5 +1,5 @@
 import axios,{get,post } from 'axios'
-import {getFilms,addFilm, deleteFilm } from '../actions/index'
+import {getFilms,addFilm, deleteFilm,editFilm } from '../actions/index'
 const getListFilm = () => (dispatch)=> {
 get('http://localhost:5555/admin/film').then(response => {
     dispatch(getFilms(response.data))
@@ -23,6 +23,7 @@ const addFilmApi = (formData) => (dispatch) =>{
 }
 
 const deleteFilmApi = (movie_id) => (dispatch) =>{
+    console.log(movie_id)
     axios({ method: 'DELETE', url: `http://localhost:5555/admin/film/delete/${movie_id}` })
     .then((response)=>{
 console.log(response)
@@ -32,8 +33,27 @@ console.log(response)
         console.log(err)
     })
 }
+const editFilmApi = (movie,movieState) => (dispatch) => {
+    axios.put(`http://localhost:5555/admin/film/edit/${movieState.movie_id}`, movie)
+    .then((response => {
+        dispatch(editFilm(response.data))
+
+    }))
+}
+
+const addFilmType = (formData,cb) =>{
+    axios.post('http://localhost:5555/admin/film-type', formData)
+    .then(response => {
+        if(response){
+            console.log(response)
+            cb()
+        }
+    })
+}
 export {
     getListFilm,
     addFilmApi,
-    deleteFilmApi
+    deleteFilmApi,
+    editFilmApi,
+    addFilmType
 }

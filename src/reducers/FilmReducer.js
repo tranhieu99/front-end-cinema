@@ -7,8 +7,14 @@ switch(action.type){
     case types.ADD_FILM_ADMIN:
         return [action.payload, ...state]
     case types.DELETE_FILM_ADMIN:
-        console.log(action)
         return state.filter(movie => movie.movie_id !== action.payload)
+    case types.ITEM_EDITING:
+         return (state.map(item =>{
+            if(item.movie_id == action.payload.movie_id){
+                return {...item, ...action.payload}
+            }
+            else return item
+        }))
     default: return state
 }
 
