@@ -58,10 +58,10 @@ const user = useContext(UserPackage);
                   </Link>
           </li>
           <li className = "nav-item">
-            <a href="#" className = "nav-link text-dark font-italic">
+            <Link to="/admin/theatre" className = "nav-link text-dark font-italic">
                       <i className = "fa fa-picture-o mr-3 text-primary fa-fw"></i>
-                      Gallery
-                  </a>
+                      Quản lý phòng chiếu
+                  </Link>
           </li>
         </ul>
       

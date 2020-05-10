@@ -26,3 +26,36 @@ export const editFilm = (film) => {
         payload: film
     }
 }
+
+
+export const getTheatre = (data) =>{
+    return{
+        type: types.GET_THEATRES,
+        payload:data
+    }
+}
+export const addTheatre = (data) => {
+    return{
+        type:types.ADD_A_THEATRE,
+        payload:data
+    }
+}
+export const getSingleTheatre = (data) =>{ 
+    return{
+        type:types.GET_THEATRE,
+        payload: data
+    }
+}
+export const deleteTheatreAction = (id) =>{
+    return{
+        type: types.DELETE_THEATRE,
+        payload:id
+    }
+}
+
+export const updateTheatreAction = (id) =>{
+    return{
+        type: types.UPDATE_THEATRE,
+        payload: id
+    }
+}

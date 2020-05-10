@@ -24,8 +24,6 @@ export default function Home(props) {
           <div>
           <img src = {slider2} alt = "slider2" /> 
           </div>
-         
-         
         </Slider>
         </div>
 

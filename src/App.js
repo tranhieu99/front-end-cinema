@@ -15,6 +15,7 @@ import Admin from './page/User/Admin'
 import AddStaff from './page/User/AddStaff'
 import StaffInfo from './page/User/StaffInfo'
 import FilmAdmin from './page/FilmAdmin/FilmAdmin'
+import Theatre from './page/Theatre/Theratre'
 import Home from './page/Home'
 export default function App() {
 
@@ -59,6 +60,9 @@ export default function App() {
             </Route>
             <Route path = "/admin/admin-film" exact>
               <FilmAdmin />
+            </Route>
+            <Route path = "/admin/theatre" exact>
+              <Theatre />
             </Route>
         </Switch>
       </div>

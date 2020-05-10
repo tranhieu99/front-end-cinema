@@ -14,7 +14,7 @@ useEffect(()=>{
     props.getListFilm();
 },[])
     return (
-        <div>
+        <div >
             <div className="d-flex ">
             <ModalFormFilm buttonLabel = "Thêm phim mới"  addFilmApi = {props.addFilmApi}/>
             <AddFilmType buttonLabel = "Thêm thể loại "/>
