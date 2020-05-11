@@ -63,6 +63,12 @@ const user = useContext(UserPackage);
                       Quản lý phòng chiếu
                   </Link>
           </li>
+          <li className = "nav-item">
+            <Link to="/admin/assign" className = "nav-link text-dark font-italic">
+            <i className="fa fa-calendar mr-3 text-primary fa-fw"></i>
+                      Quản lý lịch chiếu
+                  </Link>
+          </li>
         </ul>
       
         <p className = "text-gray font-weight-bold text-uppercase px-3 small py-4 mb-0">Charts</p>

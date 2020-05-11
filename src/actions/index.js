@@ -27,6 +27,7 @@ export const editFilm = (film) => {
     }
 }
 
+//
 
 export const getTheatre = (data) =>{
     return{
@@ -57,5 +58,21 @@ export const updateTheatreAction = (id) =>{
     return{
         type: types.UPDATE_THEATRE,
         payload: id
+    }
+}
+
+//
+
+export const getAssignAction = (data) =>{
+    return {
+        type: types.GET_ASSIGN,
+        payload:data
+    }
+}
+
+export const addAssignAction = (data) =>{
+    return{
+        type:types.ADD_ASSIGN,
+        payload:data
     }
 }

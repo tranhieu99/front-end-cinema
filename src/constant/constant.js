@@ -16,3 +16,7 @@ export const ADD_A_THEATRE = 'ADD_A_THEATRE';
 export const DELETE_THEATRE = 'DELETE_THEATRE'
 
 export const UPDATE_THEATRE = 'UPDATE_THEATRE'
+
+export const GET_ASSIGN = 'GET_ASSIGN'
+
+export const ADD_ASSIGN = 'ADD_ASSIGN'

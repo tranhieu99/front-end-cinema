@@ -17,6 +17,9 @@ import StaffInfo from './page/User/StaffInfo'
 import FilmAdmin from './page/FilmAdmin/FilmAdmin'
 import Theatre from './page/Theatre/Theratre'
 import Home from './page/Home'
+
+import Assign from './page/Assign/Assign'
+
 export default function App() {
 
   return (
@@ -63,6 +66,9 @@ export default function App() {
             </Route>
             <Route path = "/admin/theatre" exact>
               <Theatre />
+            </Route>
+            <Route path = "/admin/assign" exact>
+              <Assign />
             </Route>
         </Switch>
       </div>
