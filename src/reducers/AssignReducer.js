@@ -6,7 +6,6 @@ switch(action.type){
     case types.GET_ASSIGN:
         return action.payload
     case types.ADD_ASSIGN:
-        console.log(action.payload)
         let dataToAdd = {
             movie_name: IdOrName(`${action.payload.movie_id}`, 1),
             theatre_name:IdOrName(`${action.payload.theatre_id}`, 1),
@@ -14,6 +13,8 @@ switch(action.type){
             movie_show_date: action.payload.movie_show_date
         }
         return [...state,dataToAdd]
+    case types.DELETE_ASSIGN:
+        return state.filter(item => item.movie_show_id !== action.payload)
     default: return state
 }
 

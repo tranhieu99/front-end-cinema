@@ -76,3 +76,10 @@ export const addAssignAction = (data) =>{
         payload:data
     }
 }
+
+export const deleteAssignAction = id =>{
+    return{
+        type: types.DELETE_ASSIGN,
+        payload: id
+    }
+}

@@ -1,8 +1,12 @@
 import React from 'react'
-import { Table } from 'reactstrap';
+import { Table,Button } from 'reactstrap';
 
-export default function AssignList({assign}) {
-    console.log(assign)
+export default function AssignList({assign,deleteAssign}) {
+    const handleDeleteClick = (id,name) =>{
+      if(window.confirm(`Bạn chắc chắn muốn xoá lịch chiếu ${name}`)){
+        deleteAssign(id)
+      }
+    }
     return (
         <>
                 <Table>
@@ -13,6 +17,7 @@ export default function AssignList({assign}) {
           <th>Rạp chiếu</th>
           <th>Lịch chiếu</th>
           <th> Thời gian chiếu </th>
+          <th>Thao tác</th>
         </tr>
       </thead>
       <tbody>
@@ -24,6 +29,7 @@ export default function AssignList({assign}) {
                 <td>{item.theatre_name}</td>
               <td>{`${item.movie_show_date}`.length > 10 ? item.movie_show_date.slice(0,10) : item.movie_show_date}</td>
               <td> {item.time} </td>
+              <td> <Button onClick = {e => handleDeleteClick(item.movie_show_id,item.movie_name)} color = "danger"> Xoá </Button> </td>
               </tr>
               )
           })}

@@ -1,5 +1,5 @@
 import axios from 'axios'
-import {getAssignAction,addAssignAction} from '../actions/index'
+import {getAssignAction,addAssignAction,deleteAssignAction} from '../actions/index'
 import { IdOrName} from '../helper/IdOrName'
 const getAssignApi = () => dispatch =>{ 
     axios({
@@ -31,7 +31,16 @@ const addAssignApi = (data) => dispatch =>{
         console.log(err)
     })
 }
+const deleteAssignApi = (id) => dispatch => {
+    axios({
+        method: 'delete',
+        url: `http://localhost:5555/admin/assign/${id}`,
+    }).then(response => {
+        dispatch(deleteAssignAction(id))
+    }).catch(err => console.log(err))
+}
 export {
     getAssignApi,
-    addAssignApi
+    addAssignApi,
+    deleteAssignApi
 }

@@ -20,3 +20,5 @@ export const UPDATE_THEATRE = 'UPDATE_THEATRE'
 export const GET_ASSIGN = 'GET_ASSIGN'
 
 export const ADD_ASSIGN = 'ADD_ASSIGN'
+
+export const DELETE_ASSIGN = 'DELETE_ASSIGN'

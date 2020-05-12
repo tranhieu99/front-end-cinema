@@ -1,6 +1,6 @@
 import React,{useEffect} from 'react'
 import {connect} from 'react-redux'
-import {getAssignApi,addAssignApi} from '../api/assign-api'
+import {getAssignApi,addAssignApi,deleteAssignApi} from '../api/assign-api'
 import AssignList from '../components/Admin/Assign/AssignList'
 import ModalFormAssign from '../components/Admin/Assign/ModalFormAssign'
 
@@ -11,7 +11,7 @@ import ModalFormAssign from '../components/Admin/Assign/ModalFormAssign'
     return (
         <>
         <ModalFormAssign addAssign = {props.addAssignApi} buttonLabel = "Thêm lịch chiếu"/>
-        <AssignList assign = {props.assign}/>
+        <AssignList deleteAssign = {props.deleteAssignApi} assign = {props.assign}/>
         </>
     )
 }
@@ -20,4 +20,4 @@ return {
     assign: state.assign
 }
 }
-export default connect(mapStateToProps, {getAssignApi,addAssignApi})(AssignContainer)
+export default connect(mapStateToProps, {getAssignApi,addAssignApi,deleteAssignApi})(AssignContainer)
