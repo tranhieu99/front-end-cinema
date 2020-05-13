@@ -1,12 +1,15 @@
 import React from 'react'
 import { Table,Button } from 'reactstrap';
-
+import ModalFormAssign from './ModalFormAssign'
+import { useDispatch } from 'react-redux';
+import {getAssignAction} from '../../../actions/index'
 export default function AssignList({assign,deleteAssign}) {
     const handleDeleteClick = (id,name) =>{
       if(window.confirm(`Bạn chắc chắn muốn xoá lịch chiếu ${name}`)){
         deleteAssign(id)
       }
     }
+    const dispatch = useDispatch();
     return (
         <>
                 <Table>
@@ -33,7 +36,6 @@ export default function AssignList({assign,deleteAssign}) {
               </tr>
               )
           })}
-       
      
       </tbody>
     </Table>

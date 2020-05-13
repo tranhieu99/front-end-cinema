@@ -83,3 +83,10 @@ export const deleteAssignAction = id =>{
         payload: id
     }
 }
+
+export const getUpdateAssignAction = data => {
+return {
+    type: types.GET_UPDATE_ASSIGN,
+    payload:data
+}
+}
