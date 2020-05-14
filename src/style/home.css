@@ -9,3 +9,61 @@
     -moz-transform: translate(-50%,0);
     -webkit-transform: translate(-50%,0);
 }
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.list-film__item img {
+    width:200px;
+    }
+    .list-film-home{
+        position: relative;
+        padding-bottom:50px;
+    }
+    .list-film-home::before {
+        content:"";
+    background: url('../img/movie-details-bg.jpg');
+    position: absolute;
+    height:100%;
+    width: 100%;
+    z-index: -1;
+    }
+    .list-film-home::after {
+        content: "";
+        background: url(/static/media/scroll-down.278be42d.png);
+        position: absolute;
+        height: 150px;
+        width: 100%;
+        left: 0;
+        background-repeat: repeat-y;
+        background-position: center top;
+        top: -150px;
+    }
+    .list-film__item h2 {
+        color: #fff;
+        font-size: 18px;
+        font-weight: bold;
+        /* width: 58%; */
+        text-transform: uppercase;
+        text-align: center;
+        display: block;
+        width: 73%;
+        margin: auto;
+        margin-top: 14px;
+    }  
+    .list-film-home h1 {
+        color: #ffcb05;
+        font-size: 23px;
+        border-bottom: 1px solid;
+        width: fit-content;
+        text-transform: uppercase;
+        text-align: center;
+        padding: 50px 0 0px 0;
+        margin-bottom: 20px !important;
+        margin: auto;
+    } 
+/*     
+    .list-film__item {    width: ;
+    } */
+ 

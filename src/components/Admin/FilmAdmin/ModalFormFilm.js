@@ -3,10 +3,11 @@
     12/3/2020
 */
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
 import AddFormFilm from './AddFormFilm'
+
 const ModalFormFilm = (props) => {
   const {
     buttonLabel,
@@ -14,6 +15,9 @@ const ModalFormFilm = (props) => {
   } = props;
 const [state,setState] = useState({
 })
+  const clearState = () =>{
+    setState({})
+  }
   const [modal, setModal] = useState(false);
   const toggle = () => setModal(!modal);
   const onHandleClick = (e)=> {
@@ -25,6 +29,7 @@ const [state,setState] = useState({
     console.log(formData)
     props.addFilmApi(formData);
     setModal(!modal) 
+    clearState()
   }
   return (
     <div>
