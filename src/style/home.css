@@ -31,7 +31,7 @@
     }
     .list-film-home::after {
         content: "";
-        background: url(/static/media/scroll-down.278be42d.png);
+        background: url('../img/scroll-down.png');
         position: absolute;
         height: 150px;
         width: 100%;
@@ -63,7 +63,38 @@
         margin-bottom: 20px !important;
         margin: auto;
     } 
-/*     
-    .list-film__item {    width: ;
-    } */
+    .list-film__item {
+        position: relative;
+    }
+
+    .list-film__item__hover {
+        position: relative;
+        top: 0;
+        left: 0;
+        transition: .4s all;
+    }
+    .list-film__item__hover button {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%);
+        opacity: 0;
+        z-index: 9999999;
+        transition: .3s all;
+    }
+    .list-film__item:hover  button {
+        opacity: 1;
+    }
+
  
+    .list-film__item__hover:hover {
+        background: #00000073;
+    }
+    .modal-body {
+        width: 100%;
+        padding: 0;
+    }
+    .modal-body iframe{
+       width:100%;
+       height:350px;
+    }

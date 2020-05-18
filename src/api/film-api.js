@@ -50,10 +50,11 @@ const addFilmType = (formData,cb) =>{
         }
     })
 }
+
 export {
     getListFilm,
     addFilmApi,
     deleteFilmApi,
     editFilmApi,
-    addFilmType
+    addFilmType,
 }

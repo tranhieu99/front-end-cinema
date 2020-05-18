@@ -3,6 +3,7 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
+  matchPath,
   
 } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -19,6 +20,7 @@ import Theatre from './page/Theatre/Theratre'
 import Home from './page/Home'
 
 import Assign from './page/Assign/Assign'
+import SingleMovie from "./page/Single/SingleMovie";
 
 export default function App() {
 
@@ -70,6 +72,10 @@ export default function App() {
             <Route path = "/admin/assign" exact>
               <Assign />
             </Route>
+            <Route path = "/movie/:movie_id" render = {({match}) => {
+              return <SingleMovie  match = {match}/>
+            }} exact/>
+              
         </Switch>
       </div>
     </Router>

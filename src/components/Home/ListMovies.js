@@ -1,6 +1,9 @@
 import React from 'react'
 import Slider from 'react-slick'
 import Loading from '../Loading'
+import ModalTrailer from './ModalTrailer'
+import { Link } from 'react-router-dom';
+
 export default function ListMovies({movie}) {
     const settings = {
         dots: false,
@@ -22,9 +25,12 @@ export default function ListMovies({movie}) {
 {!movie.length ? <Loading /> : movie.map((item,index) => {
     return(
     <div class="list-film__item">
+    <div class="list-film__item__hover">
+        <div></div>
     <img src = {`${item.movie_image}`} alt = {`${item.movie_name}`}/>
-    <h2> {item.movie_name} </h2>
-
+    <ModalTrailer movie_trailer = {item.movie_trailer} />
+    </div>
+    <Link to = {`/movie/${item.movie_id} ` }> <h2> {item.movie_name} </h2> </Link>  
     </div>
     )
 })}
