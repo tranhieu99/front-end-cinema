@@ -1,0 +1,25 @@
+
+.assign-in-single h1 {
+    color: #8ac441;
+    font-size: 26px;
+    border-bottom: 1px solid;
+    text-align: center;
+}
+
+.assign-in-single__detail .detail .detail__theatre {
+    box-shadow: 3px 5px 21px 0px rgba(5, 12, 17, 1);
+    color: #fff;
+    padding: 19px;
+    background: #1c2936;
+}
+.assign-in-single__detail .detail {
+    display: flex;
+}
+
+.detail__date {
+    background: #151d25;
+    color: #ada4a4;
+    box-shadow: 3px 5px 21px 0px rgba(5, 12, 17, 1);
+    padding: 19px;
+    margin-left:50px;
+}

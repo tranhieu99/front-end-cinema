@@ -1,0 +1,26 @@
+.single-wrapper{
+    background: url('../../img/movie-details-bg.jpg');
+    background-attachment: fixed;
+}
+ul.breadcrumb-single li,ul.breadcrumb-single li a   {
+    color: #fff !important;
+}
+ul.breadcrumb-single{
+    list-style:none;
+    display:flex;
+    padding:50px 0px;
+}
+ul.breadcrumb-single li:nth-child(1) {
+    font-size:30px;
+
+}
+ul.breadcrumb-single li:nth-child(2){
+    font-size:30px;
+    font-weight:bold;
+    text-transform:uppercase;
+
+}
+.movie_detail {color: #fff;}
+.movie_detail p:nth-child(2){
+    color:#a7a4a4;
+}

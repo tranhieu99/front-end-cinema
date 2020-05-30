@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { Button, Modal, ModalBody } from 'reactstrap';
 
-const ModalTrailer = ({buttonLabel,className,movie_trailer}) => {
-
+const ModalTrailer = ({buttonLabel,buttonColor,className,movie_trailer}) => {
 
   const [modal, setModal] = useState(false);
 
@@ -10,7 +9,7 @@ const ModalTrailer = ({buttonLabel,className,movie_trailer}) => {
 
   return (
     <div>
-      <Button color="danger" onClick={toggle}><i class="fa fa-play"></i></Button>
+      <Button color={buttonColor} onClick={toggle}> {!buttonLabel ? <i class="fa fa-play"></i> : buttonLabel }</Button>
       <Modal isOpen={modal} toggle={toggle} className={className}>
         <ModalBody>
             <iframe src = {movie_trailer} > </iframe>

@@ -26,7 +26,10 @@ export default function FormInput(props){
           auth.autheticate(data,()=>{
             localStorage.setItem("json_token", data.token)
             localStorage.setItem("role", data.role)
-
+            localStorage.setItem("first_name", data.first_name)
+            localStorage.setItem("last_name", data.last_name)
+            localStorage.setItem("user_id", data.user_id)
+            localStorage.setItem("email", data.email)
             setRedirect(true);
           })
         }

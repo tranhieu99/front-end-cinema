@@ -9,7 +9,6 @@ export default function AssignList({assign,deleteAssign}) {
         deleteAssign(id)
       }
     }
-    const dispatch = useDispatch();
     return (
         <>
                 <Table>

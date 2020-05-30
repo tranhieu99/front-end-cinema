@@ -28,9 +28,9 @@ export default function ListMovies({movie}) {
     <div class="list-film__item__hover">
         <div></div>
     <img src = {`${item.movie_image}`} alt = {`${item.movie_name}`}/>
-    <ModalTrailer movie_trailer = {item.movie_trailer} />
+    <ModalTrailer buttonColor = "danger" movie_trailer = {item.movie_trailer} />
     </div>
-    <Link to = {`/movie/${item.movie_id} ` }> <h2> {item.movie_name} </h2> </Link>  
+    <Link to = {`/movie/${item.movie_id}` }> <h2> {item.movie_name} </h2> </Link>
     </div>
     )
 })}

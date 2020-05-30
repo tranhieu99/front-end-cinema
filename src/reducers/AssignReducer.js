@@ -17,7 +17,6 @@ switch(action.type){
         return state.filter(item => item.movie_show_id !== action.payload)
     default: return state
 }
-
 }
 
 export {
