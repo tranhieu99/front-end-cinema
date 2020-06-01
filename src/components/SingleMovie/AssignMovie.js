@@ -42,13 +42,18 @@ setFormData({
 const [modal, setModal] = useState(false);
 
 const toggle = () => setModal(!modal);
-
+console.log(assign)
     return (
         <div className ="assign-in-single">
             <h1>Lịch chiếu</h1>
             
             <div className = "assign-in-single__detail">
                {assign && assign.map((item) =>{
+                 console.log(new Date(`${item.movie_show_date}`) - new Date())
+                 if(new Date(`${item.movie_show_date}`) - new Date() < 0){
+                   return ""
+                 }
+else{
                    return(
                     <div key = {item.movie_show_id} className ="detail">
                         <div className = "detail__theatre">
@@ -108,7 +113,7 @@ const toggle = () => setModal(!modal);
                         </div>
                     </div>
                    )
-                  
+                          }
                })}
             </div>
         </div>

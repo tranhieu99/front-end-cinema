@@ -48,17 +48,24 @@ if(history.location.pathname.includes("/admin")){
               <Col md = {4} className = "header-main-right">
               <ul className = "header-main-right__list d-flex justify-content-around">
               <li> <a href = "#"><img src = {movie_365}  /></a> </li>
-                  <li> <a href = "#"><img src={member} /></a> </li>
+                  <li> <Link to = {`/Profile/${user.data.user_name}`}><img src={member} /></Link> </li>
                   </ul> 
               </Col>
             </Row>
             </Container>
+            {/* <div class="profile-user"> 
+            
+            { auth.isAutheticate() && (   <p className="float-right"> 
+              <p>Xin chào</p>    
+            </p>) }</div> */}
             <div className = "sign-in-nav">
             { !auth.isAutheticate() && (   <NavItem>
             <Link to="/signin">Đăng nhập</Link>
             </NavItem>) }
-
-            {auth.isAutheticate() && (<NavItem>
+           
+            {
+            
+            auth.isAutheticate() && (<NavItem>
             <Button onClick = {() => auth.signout(() => history.push("/")) }>Đăng xuất</Button>
             </NavItem>) }
             </div>
@@ -85,7 +92,7 @@ if(history.location.pathname.includes("/admin")){
         </Collapse>
         <ul className = "header-main-middle__list d-flex justify-content-center">
                   {/* <li className ="d-flex"> <p>VI</p> | <p>EN</p></li> */}
-                  <li> <a href = "#"><img src = {logo} /></a>         <img alt="" class="line-header" src="https://www.bhdstar.vn/wp-content/themes/bhd/assets/images/line-header1.png" /> </li>
+                  <li> <Link to = "/"><img src = {logo} /></Link>         <img alt="" class="line-header" src="https://www.bhdstar.vn/wp-content/themes/bhd/assets/images/line-header1.png" /> </li>
                   {/* <li> <a href = "#"><i class ="fa fa-phone"></i> 19001000</a> </li> */}
               </ul> 
       </Navbar>
